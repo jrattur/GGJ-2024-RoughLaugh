@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d268203f2g711"]
+
+[ext_resource type="Script" path="res://Player/character_body_2d.gd" id="1_00lqg"]
+[ext_resource type="Texture2D" uid="uid://i6qkt540wpaf" path="res://sprites/chopstick.jpg" id="2_xyts4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5j1hl"]
+size = Vector2(534, 273)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_00lqg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -4)
+shape = SubResource("RectangleShape2D_5j1hl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(0.411731, 0.332275)
+texture = ExtResource("2_xyts4")
