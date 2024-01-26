@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cey5xxf75hrts"]
+
+[ext_resource type="Script" path="res://Managers/SushiSpawner.gd" id="1_j2i1p"]
+
+[node name="SushiSpawner" type="Node2D"]
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("1_j2i1p")
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
