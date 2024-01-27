@@ -49,19 +49,19 @@ shape = SubResource("RectangleShape2D_bm5ex")
 [node name="Sprite2D" type="Sprite2D" parent="Plate"]
 texture = ExtResource("4_qw0ep")
 
-[node name="dudeman" type="StaticBody2D" parent="." groups=["dudeman"]]
+[node name="dudeman" type="StaticBody2D" parent="."]
 position = Vector2(163, 168)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dudeman" groups=["dudeman"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dudeman"]
 position = Vector2(35.5, 40.5)
 shape = SubResource("RectangleShape2D_fgal8")
 
-[node name="mouthclosed" type="Sprite2D" parent="dudeman" groups=["dudeman"]]
+[node name="mouthclosed" type="Sprite2D" parent="dudeman"]
 position = Vector2(40, 43.5)
 scale = Vector2(1.38095, 1.3625)
 texture = ExtResource("5_oqo2w")
 
-[node name="mouthopen" type="Sprite2D" parent="dudeman" groups=["dudeman"]]
+[node name="mouthopen" type="Sprite2D" parent="dudeman"]
 visible = false
 position = Vector2(40.5, 47)
 scale = Vector2(1.38571, 1.39167)

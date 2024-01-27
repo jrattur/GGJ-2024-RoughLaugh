@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwcs1afptea4w"]
+
+[ext_resource type="Texture2D" uid="uid://dclq56mtjjlea" path="res://sprites/sushi1.png" id="1_23rfo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2wk7"]
+size = Vector2(70, 221)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 15
+physics_material_override = SubResource("PhysicsMaterial_0f4y3")
+gravity_scale = 0.0
+linear_damp = 15.0
+angular_damp = 30.505
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -9.5)
+shape = SubResource("RectangleShape2D_y2wk7")
+
+[node name="stump" type="Sprite2D" parent="."]
+scale = Vector2(0.443025, 1.46545)
+texture = ExtResource("1_23rfo")

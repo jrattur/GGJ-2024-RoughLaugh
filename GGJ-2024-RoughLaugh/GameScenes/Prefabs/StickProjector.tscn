@@ -14,7 +14,7 @@
 script = ExtResource("1_toxxn")
 
 [node name="LeftChopstickHead" type="CharacterBody2D" parent="."]
-position = Vector2(100, 122)
+position = Vector2(256, 759)
 script = ExtResource("2_dv1p2")
 
 [node name="LeftChopstickSprite" type="Sprite2D" parent="LeftChopstickHead"]
@@ -27,7 +27,7 @@ scale = Vector2(1.2, 1.2)
 shape = SubResource("CircleShape2D_02ojd")
 
 [node name="RightChopstickHead" type="CharacterBody2D" parent="."]
-position = Vector2(1790, 121)
+position = Vector2(1609, 765)
 script = ExtResource("4_s525r")
 
 [node name="RightChopstickSprite" type="Sprite2D" parent="RightChopstickHead"]
