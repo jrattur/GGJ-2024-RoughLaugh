@@ -1,17 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://boowm3elygwy5"]
+[gd_scene load_steps=5 format=3 uid="uid://boowm3elygwy5"]
 
 [ext_resource type="Texture2D" uid="uid://ee6xnao7tfwk" path="res://sprites/document_contract.png" id="1_i4xlt"]
+[ext_resource type="Script" path="res://GameScenes/StumpStage/paper.gd" id="2_0ibl5"]
+[ext_resource type="Texture2D" uid="uid://bbtbpv4lm2ro6" path="res://sprites/stumpSign.png" id="2_mluh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xlkwl"]
-size = Vector2(85, 34)
+size = Vector2(55, 34)
 
 [node name="Paper" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.5, 25)
+position = Vector2(-4.5, 25)
 shape = SubResource("RectangleShape2D_xlkwl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4.76837e-07, -9)
 scale = Vector2(0.189346, 0.21163)
 texture = ExtResource("1_i4xlt")
+script = ExtResource("2_0ibl5")
+
+[node name="StumpSign" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(-40.406, 49.1622)
+scale = Vector2(0.640836, 0.563003)
+texture = ExtResource("2_mluh5")
+
+[connection signal="area_entered" from="." to="Sprite2D" method="_on_paper_area_entered"]

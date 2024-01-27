@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpv8o82ayvj4"]
+
+[ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="1_v8kxm"]
+[ext_resource type="PackedScene" uid="uid://b1w3grpqyvefo" path="res://GameScenes/Prefabs/Wall.tscn" id="2_dtxx2"]
+[ext_resource type="PackedScene" uid="uid://csum2ce4x5rp0" path="res://GameScenes/Prefabs/plate1.tscn" id="3_ywf8g"]
+[ext_resource type="Script" path="res://GameScenes/Level1/Level1Manager.gd" id="4_afepq"]
+[ext_resource type="PackedScene" uid="uid://burb5qstcfxes" path="res://GameScenes/Prefabs/Dudeman.tscn" id="5_v6g8f"]
+[ext_resource type="PackedScene" uid="uid://c4plo6n4frvxc" path="res://GameScenes/Prefabs/BackgroundLev1.tscn" id="6_aplk5"]
+[ext_resource type="PackedScene" uid="uid://ckqyxpo0tugtu" path="res://GameScenes/Prefabs/sushi11.tscn" id="7_4vce3"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="StickProjector" parent="." instance=ExtResource("1_v8kxm")]
+
+[node name="Wall" parent="." instance=ExtResource("2_dtxx2")]
+position = Vector2(932, 1161)
+
+[node name="Wall2" parent="." instance=ExtResource("2_dtxx2")]
+position = Vector2(944, -94)
+
+[node name="Wall3" parent="." instance=ExtResource("2_dtxx2")]
+position = Vector2(-100, 521)
+rotation = 1.56747
+
+[node name="Wall4" parent="." instance=ExtResource("2_dtxx2")]
+position = Vector2(2033, 659)
+rotation = 1.55994
+scale = Vector2(1.14838, 1.12492)
+
+[node name="Plate" parent="." instance=ExtResource("3_ywf8g")]
+
+[node name="Level1Manager" type="Node2D" parent="."]
+script = ExtResource("4_afepq")
+
+[node name="Dudeman" parent="." instance=ExtResource("5_v6g8f")]
+position = Vector2(255, 221)
+
+[node name="BackgroundLev1" parent="." instance=ExtResource("6_aplk5")]
+position = Vector2(960, 540)
+
+[node name="Sushi" parent="." instance=ExtResource("7_4vce3")]
+position = Vector2(998, 758)
