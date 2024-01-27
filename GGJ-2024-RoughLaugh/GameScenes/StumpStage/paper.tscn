@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://boowm3elygwy5"]
+
+[ext_resource type="Texture2D" uid="uid://ee6xnao7tfwk" path="res://sprites/document_contract.png" id="1_i4xlt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlkwl"]
+size = Vector2(85, 34)
+
+[node name="Paper" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 25)
+shape = SubResource("RectangleShape2D_xlkwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, -9)
+scale = Vector2(0.189346, 0.21163)
+texture = ExtResource("1_i4xlt")

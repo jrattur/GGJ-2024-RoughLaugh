@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="1_wkioe"]
 [ext_resource type="PackedScene" uid="uid://bxw886swyr5id" path="res://Player/sushi.tscn" id="2_6kbay"]
-[ext_resource type="PackedScene" uid="uid://b1w3grpqyvefo" path="res://GameScenes/Prefabs/Wall.tscn" id="3_gjgfo"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Wall.tscn" id="3_gjgfo"]
 
 [node name="Level1" type="Node2D"]
 
