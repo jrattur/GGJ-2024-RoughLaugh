@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtjtmejpavl4n"]
+
+[ext_resource type="PackedScene" uid="uid://bxw886swyr5id" path="res://Player/sushi.tscn" id="1_4vrp1"]
+
+[node name="NewSushi1" type="Node"]
+
+[node name="Sushi" parent="." instance=ExtResource("1_4vrp1")]
