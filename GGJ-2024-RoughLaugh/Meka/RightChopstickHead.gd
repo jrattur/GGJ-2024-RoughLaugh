@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-var SPEED = 200  # Adjust the speed as needed
+var SPEED = 600  # Adjust the speed as needed
 
 func _physics_process(delta):
 	
