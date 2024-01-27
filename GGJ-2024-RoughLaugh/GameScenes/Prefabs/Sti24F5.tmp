@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://6glg2m67852o"]
+
+[ext_resource type="Script" path="res://GameScenes/Prefabs/StickProjector.gd" id="1_toxxn"]
+[ext_resource type="Script" path="res://Meka/LeftChopstickHead.gd" id="2_dv1p2"]
+[ext_resource type="Texture2D" uid="uid://dwsl13a4hsfll" path="res://sprites/left-chopstick.png" id="3_m7tu8"]
+[ext_resource type="Script" path="res://Meka/RightChopstickHead.gd" id="4_s525r"]
+[ext_resource type="Texture2D" uid="uid://bj6yy5soq51ed" path="res://sprites/right-chopstick.png" id="5_fwboy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_02ojd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ij4qu"]
+
+[node name="StickProjector" type="Node2D"]
+script = ExtResource("1_toxxn")
+
+[node name="LeftChopstickHead" type="CharacterBody2D" parent="."]
+position = Vector2(100, 122)
+script = ExtResource("2_dv1p2")
+
+[node name="LeftChopstickSprite" type="Sprite2D" parent="LeftChopstickHead"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_m7tu8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftChopstickHead"]
+scale = Vector2(1.2, 1.2)
+shape = SubResource("CircleShape2D_02ojd")
+
+[node name="LeftChopStickTail" type="Node2D" parent="LeftChopstickHead"]
+
+[node name="RightChopstickHead" type="CharacterBody2D" parent="."]
+position = Vector2(1790, 121)
+script = ExtResource("4_s525r")
+
+[node name="RightChopstickSprite" type="Sprite2D" parent="RightChopstickHead"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_fwboy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightChopstickHead"]
+scale = Vector2(1.2, 1.2)
+shape = SubResource("CircleShape2D_ij4qu")

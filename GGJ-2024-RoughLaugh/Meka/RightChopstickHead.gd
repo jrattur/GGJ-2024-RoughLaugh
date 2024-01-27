@@ -1,21 +1,27 @@
 extends CharacterBody2D
 
 
-var speed = 200  # Adjust the speed as needed
+var SPEED = 200  # Adjust the speed as needed
 
 func _physics_process(delta):
-	velocity.x = 0
-	velocity.y = 0
-
-	if Input.is_key_pressed(KEY_LEFT):
-		velocity.x -= 1
-	if Input.is_key_pressed(KEY_RIGHT):
-		velocity.x += 1
-	if Input.is_key_pressed(KEY_UP):
-		velocity.y -= 1
-	if Input.is_key_pressed(KEY_DOWN):
-		velocity.y += 1
-
-	velocity = velocity.normalized() * speed
 	
+	#var velocity = Vector2() # The character's movement vector.
+
+	# Check for input and adjust the velocity accordingly.
+	if Input.is_action_pressed("r_move_right"):
+		velocity.x += 1000
+	if Input.is_action_pressed("r_move_left"):
+		velocity.x -= 1000
+	if Input.is_action_pressed("r_move_down"):
+		velocity.y += 1000
+	if Input.is_action_pressed("r_move_up"):
+		velocity.y -= 1000
+
+	# Normalize the velocity to ensure consistent movement speed in all directions.
+	velocity = velocity.normalized() * SPEED
+
+	if Input.is_anything_pressed()==false:
+		velocity = Vector2.ZERO
+
+	# Move the character.
 	move_and_slide()
