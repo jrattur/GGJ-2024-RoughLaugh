@@ -17,8 +17,6 @@ func _draw():
 	var p1 = Vector2(120, 900)
 	var p2 = Vector2(1800, 900)
 	
-	print(leftHeadCenter)
-	print(rightHeadCenter)
 	draw_line(leftHeadCenter, p1,Color("#ff8f46"), 24)
 	draw_line(rightHeadCenter, p2, Color("#ff8f46"), 24)
 #
