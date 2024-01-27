@@ -19,8 +19,8 @@ func _draw():
 	
 	print(leftHeadCenter)
 	print(rightHeadCenter)
-	draw_line(leftHeadCenter, p1, Color(1, 1, 1), 20)
-	draw_line(rightHeadCenter, p2, Color(1, 1, 1), 20)
+	draw_line(leftHeadCenter, p1,Color("#ff8f46"), 24)
+	draw_line(rightHeadCenter, p2, Color("#ff8f46"), 24)
 #
 #
 #func update_line(point1, point2):

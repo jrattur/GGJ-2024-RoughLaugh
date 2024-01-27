@@ -6,11 +6,6 @@
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_gukeq")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(960, 300)
-scale = Vector2(4, 4)
-texture = ExtResource("2_fxc5t")
-
 [node name="PlayButton" type="Button" parent="."]
 offset_left = 814.0
 offset_top = 478.0
@@ -24,5 +19,10 @@ offset_top = 595.0
 offset_right = 1020.0
 offset_bottom = 644.0
 text = "About"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 300)
+scale = Vector2(4, 4)
+texture = ExtResource("2_fxc5t")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
