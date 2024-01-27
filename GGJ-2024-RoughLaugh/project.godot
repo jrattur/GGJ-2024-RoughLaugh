@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GGJ-2024-RoughLaugh"
-run/main_scene="res://joel/doublechopstick.tscn"
+run/main_scene="res://Meka/POV_Prototype.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 

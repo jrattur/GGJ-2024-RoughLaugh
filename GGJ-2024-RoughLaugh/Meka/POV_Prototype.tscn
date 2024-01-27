@@ -34,7 +34,7 @@ position = Vector2(2.08165e-12, 2.08165e-12)
 script = ExtResource("2_f15af")
 
 [node name="LeftChopstickHead" type="CharacterBody2D" parent="StickProjector"]
-position = Vector2(240, 360)
+position = Vector2(60, 90)
 script = ExtResource("3_1pu8w")
 
 [node name="LeftChopstickSprite" type="Sprite2D" parent="StickProjector/LeftChopstickHead"]
@@ -47,7 +47,7 @@ scale = Vector2(1.2, 1.2)
 shape = SubResource("CircleShape2D_4i8s0")
 
 [node name="RightChopstickHead" type="CharacterBody2D" parent="StickProjector"]
-position = Vector2(1040, 360)
+position = Vector2(260, 90)
 script = ExtResource("2_ev5sj")
 
 [node name="RightChopstickSprite" type="Sprite2D" parent="StickProjector/RightChopstickHead"]

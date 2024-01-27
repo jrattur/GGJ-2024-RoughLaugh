@@ -14,8 +14,8 @@ func _draw():
 	var leftHeadCenter = (leftHead.global_position)
 	var rightHeadCenter = (rightHead.global_position)
 
-	var p1 = Vector2(120, 600)
-	var p2 = Vector2(1080, 600)
+	var p1 = Vector2(30, 150)
+	var p2 = Vector2(270, 150)
 	
 	print(leftHeadCenter)
 	print(rightHeadCenter)
