@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://c2x6cdp8hd0se"]
 
-[ext_resource type="Script" path="res://Meka/MainMenu.gd" id="1_qhy8o"]
+[ext_resource type="Script" path="res://GameScenes/MainMenu/MainMenu.gd" id="1_gukeq"]
 
 [node name="MainMenu" type="Node2D"]
-script = ExtResource("1_qhy8o")
+script = ExtResource("1_gukeq")
 
 [node name="Title" type="Label" parent="."]
 offset_left = 532.0
