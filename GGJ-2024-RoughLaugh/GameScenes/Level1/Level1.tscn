@@ -43,6 +43,7 @@ position = Vector2(-17.5, 0)
 shape = SubResource("RectangleShape2D_bm5ex")
 
 [node name="Sprite2D" type="Sprite2D" parent="Plate"]
+z_index = -5
 texture = ExtResource("4_qw0ep")
 
 [node name="Level1Manager" type="Node2D" parent="."]

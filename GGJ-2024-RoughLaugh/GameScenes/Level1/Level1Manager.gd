@@ -13,7 +13,7 @@ var sushiPrefab = preload("res://Player/sushi.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	dudeman = $"../dudeman"
+	dudeman = $"../Dudeman"
 	
 	#dudemanMouthClosed = dudeman.get_node("mouthclosed")
 	#dudemanMouthOpen = dudeman.get_node("mouthopen")
@@ -38,7 +38,7 @@ func _process(delta):
 			#dudemanMouthOpen.visible = false
 #
 #
-	if get_tree().get_nodes_in_group("Sushi").size() == 0:
+	if get_tree().get_nodes_in_group("Sushi").size() == 0 && dudeman.sushiEaten < 3:
 		var instantiatedSushi = sushiPrefab.instantiate()
 		add_child(instantiatedSushi)
 		instantiatedSushi.position.x = 1000;

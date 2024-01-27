@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GameScenes/Prefabs/StickProjector.gd" id="1_toxxn"]
 [ext_resource type="Script" path="res://Meka/LeftChopstickHead.gd" id="2_dv1p2"]
-[ext_resource type="Texture2D" uid="uid://cenny8trbl2a4" path="res://sprites/final-assets-kinda/chopstick-head.png" id="3_ekhp4"]
+[ext_resource type="Texture2D" uid="uid://cenny8trbl2a4" path="res://sprites/final-assets-kinda/chopstick-head.png" id="3_2m82w"]
 [ext_resource type="Script" path="res://Meka/RightChopstickHead.gd" id="4_s525r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_02ojd"]
@@ -17,9 +17,10 @@ position = Vector2(256, 759)
 script = ExtResource("2_dv1p2")
 
 [node name="LeftChopstickSprite" type="Sprite2D" parent="LeftChopstickHead"]
+z_index = 10
 position = Vector2(2.08165e-12, 2.08165e-12)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_ekhp4")
+texture = ExtResource("3_2m82w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftChopstickHead"]
 scale = Vector2(1.2, 1.2)
@@ -30,8 +31,9 @@ position = Vector2(1609, 765)
 script = ExtResource("4_s525r")
 
 [node name="RightChopstickSprite" type="Sprite2D" parent="RightChopstickHead"]
+z_index = 10
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_ekhp4")
+texture = ExtResource("3_2m82w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightChopstickHead"]
 scale = Vector2(1.2, 1.2)

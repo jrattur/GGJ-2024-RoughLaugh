@@ -21,6 +21,7 @@ offset_bottom = 644.0
 text = "About"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(960, 300)
 scale = Vector2(4, 4)
 texture = ExtResource("2_fxc5t")

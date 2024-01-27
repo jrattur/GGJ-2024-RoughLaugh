@@ -20,6 +20,7 @@ position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_y2wk7")
 
 [node name="Sushi1" type="Sprite2D" parent="." groups=["Sushi"]]
+z_index = -5
 position = Vector2(0, 0.999992)
 scale = Vector2(1.28039, 1.31522)
 texture = ExtResource("1_bjxbw")
