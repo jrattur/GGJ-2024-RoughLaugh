@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq3y0yq61j443"]
+
+[ext_resource type="Texture2D" uid="uid://b1i4iqpixuy4o" path="res://joel/bg.png" id="1_8epxl"]
+[ext_resource type="PackedScene" uid="uid://bxw886swyr5id" path="res://Player/sushi.tscn" id="2_36p0x"]
+[ext_resource type="Texture2D" uid="uid://dh5e41dordpix" path="res://sprites/fixedchopstick.png" id="3_hmcw2"]
+[ext_resource type="Script" path="res://joel/CharacterBody2D3.gd" id="3_o1ph7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wr7wk"]
+
+[node name="Doublechopstick" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("1_8epxl")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_36p0x")]
+position = Vector2(71, 47)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_36p0x")]
+position = Vector2(241, 63)
+
+[node name="CharacterBody2D3" type="CharacterBody2D" parent="."]
+script = ExtResource("3_o1ph7")
+
+[node name="Fixedchopstick" type="Sprite2D" parent="CharacterBody2D3"]
+position = Vector2(146, 158)
+scale = Vector2(0.166667, 0.378378)
+texture = ExtResource("3_hmcw2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D3"]
+shape = SubResource("RectangleShape2D_wr7wk")
