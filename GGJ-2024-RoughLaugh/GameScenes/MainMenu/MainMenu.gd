@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func _on_play_button_pressed():
-	get_tree().change_scene_to_file("res://Meka/POV_Prototype.tscn")
+	get_tree().change_scene_to_file("res://GameScenes/Level1/Level1.tscn")
