@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://xxa3kw5oalwx"]
+
+[node name="TheGame" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 470.0
+offset_top = 296.0
+offset_right = 551.0
+offset_bottom = 319.0
+text = "THE GAME"

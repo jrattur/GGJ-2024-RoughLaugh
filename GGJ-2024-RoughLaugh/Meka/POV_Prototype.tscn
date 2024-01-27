@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://cormsnpfgjmrh"]
+
+[ext_resource type="Texture2D" uid="uid://bj6yy5soq51ed" path="res://sprites/right-chopstick.png" id="1_7tx6v"]
+[ext_resource type="Script" path="res://Meka/RightChopstickHead.gd" id="2_ev5sj"]
+[ext_resource type="Script" path="res://Meka/LeftChopstickHead.gd" id="3_1pu8w"]
+[ext_resource type="Texture2D" uid="uid://dwsl13a4hsfll" path="res://sprites/left-chopstick.png" id="3_cw8gr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4p8um"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4i8s0"]
+
+[node name="PovPrototype" type="Node2D"]
+
+[node name="RightChopstickHead" type="CharacterBody2D" parent="."]
+script = ExtResource("2_ev5sj")
+
+[node name="RightChopstickSprite" type="Sprite2D" parent="RightChopstickHead"]
+position = Vector2(830, 347)
+texture = ExtResource("1_7tx6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightChopstickHead"]
+position = Vector2(830, 347)
+scale = Vector2(2.4, 2.4)
+shape = SubResource("CircleShape2D_4p8um")
+
+[node name="LeftChopstickHead" type="CharacterBody2D" parent="."]
+script = ExtResource("3_1pu8w")
+
+[node name="LeftChopstickSprite" type="Sprite2D" parent="LeftChopstickHead"]
+position = Vector2(117, 195)
+texture = ExtResource("3_cw8gr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftChopstickHead"]
+position = Vector2(117, 195)
+scale = Vector2(2.4, 2.4)
+shape = SubResource("CircleShape2D_4i8s0")
