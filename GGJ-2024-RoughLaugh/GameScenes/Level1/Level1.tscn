@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcamctukbb2nv"]
+[gd_scene load_steps=4 format=3 uid="uid://dcamctukbb2nv"]
 
 [ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="1_wkioe"]
 [ext_resource type="PackedScene" uid="uid://bxw886swyr5id" path="res://Player/sushi.tscn" id="2_6kbay"]
+[ext_resource type="PackedScene" uid="uid://b1w3grpqyvefo" path="res://GameScenes/Prefabs/Wall.tscn" id="3_gjgfo"]
 
 [node name="Level1" type="Node2D"]
 
@@ -18,3 +19,17 @@ position = Vector2(1079, 413)
 
 [node name="RigidBody2D4" parent="." instance=ExtResource("2_6kbay")]
 position = Vector2(1387, 464)
+
+[node name="Wall" parent="." instance=ExtResource("3_gjgfo")]
+position = Vector2(932, 1161)
+
+[node name="Wall2" parent="." instance=ExtResource("3_gjgfo")]
+position = Vector2(944, -94)
+
+[node name="Wall3" parent="." instance=ExtResource("3_gjgfo")]
+position = Vector2(-100, 521)
+rotation = 1.56747
+
+[node name="Wall4" parent="." instance=ExtResource("3_gjgfo")]
+position = Vector2(2033, 659)
+rotation = 1.55994
