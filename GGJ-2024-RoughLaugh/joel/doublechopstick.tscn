@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dclq56mtjjlea" path="res://sprites/sushi1.png" id="6_xo1rl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr7wk"]
+size = Vector2(228, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqb3e"]
 
@@ -18,17 +19,19 @@ position = Vector2(160, 90)
 texture = ExtResource("1_8epxl")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_36p0x")]
-position = Vector2(156, 76)
+position = Vector2(59, 45)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_36p0x")]
-position = Vector2(200, 150)
+position = Vector2(191, 84)
 
 [node name="LeftChopStick" type="CharacterBody2D" parent="."]
-position = Vector2(-20, -42)
+position = Vector2(47, 225)
+rotation = -0.896977
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("3_o1ph7")
 
 [node name="Fixedchopstick" type="Sprite2D" parent="LeftChopStick"]
-position = Vector2(146, 158)
 scale = Vector2(0.166667, 0.378378)
 texture = ExtResource("3_hmcw2")
 
@@ -36,19 +39,22 @@ texture = ExtResource("3_hmcw2")
 shape = SubResource("RectangleShape2D_wr7wk")
 
 [node name="RightChopStick" type="CharacterBody2D" parent="."]
-position = Vector2(40, -4)
+position = Vector2(328, 215)
+rotation = -2.35129
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("5_8858y")
 
 [node name="Fixedchopstick" type="Sprite2D" parent="RightChopStick"]
-position = Vector2(146, 158)
 scale = Vector2(0.166667, 0.378378)
 texture = ExtResource("3_hmcw2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightChopStick"]
-position = Vector2(117, 30)
 shape = SubResource("RectangleShape2D_wr7wk")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 4
+collision_mask = 7
 gravity_scale = 0.01
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
