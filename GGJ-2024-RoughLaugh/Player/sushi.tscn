@@ -21,3 +21,6 @@ shape = SubResource("RectangleShape2D_y2wk7")
 position = Vector2(0, 0.999992)
 scale = Vector2(1.28039, 1.31522)
 texture = ExtResource("1_bjxbw")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 7
