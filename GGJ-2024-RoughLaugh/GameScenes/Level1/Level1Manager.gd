@@ -30,6 +30,8 @@ func _ready():
 	
 	leftChopStick = stickProjector.get_node("LeftChopstickHead")
 	rightChopStick = stickProjector.get_node("RightChopstickHead")
+	
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -57,10 +59,10 @@ func _process(delta):
 			add_child(instantiatedSushPlate)
 			
 			instantiatedSushi.position.x = 300;
-			instantiatedSushi.position.y = 600;
+			instantiatedSushi.position.y = 800;
 			
 			instantiatedSushPlate.position.x = 300;
-			instantiatedSushPlate.position.y = 620;
+			instantiatedSushPlate.position.y = 820;
 		
 		if sushisSpawned == 1:
 			instantiatedSushi = sushiPrefab3.instantiate()
@@ -69,10 +71,10 @@ func _process(delta):
 			add_child(instantiatedSushPlate)
 			
 			instantiatedSushi.position.x = 1650;
-			instantiatedSushi.position.y = 600;
+			instantiatedSushi.position.y = 800;
 			
 			instantiatedSushPlate.position.x = 1650;
-			instantiatedSushPlate.position.y = 620;
+			instantiatedSushPlate.position.y = 820;
 		
 		sushisSpawned += 1;
 		

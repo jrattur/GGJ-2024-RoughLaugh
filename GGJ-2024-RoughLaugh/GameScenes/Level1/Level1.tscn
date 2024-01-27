@@ -28,6 +28,7 @@ rotation = 1.55994
 scale = Vector2(1.14838, 1.12492)
 
 [node name="Plate" parent="." instance=ExtResource("3_iheah")]
+position = Vector2(960, 917)
 
 [node name="Level1Manager" type="Node2D" parent="."]
 script = ExtResource("6_np52r")
@@ -39,4 +40,4 @@ position = Vector2(255, 221)
 position = Vector2(960, 540)
 
 [node name="Sushi" parent="." instance=ExtResource("7_87scu")]
-position = Vector2(998, 758)
+position = Vector2(960, 876.445)
