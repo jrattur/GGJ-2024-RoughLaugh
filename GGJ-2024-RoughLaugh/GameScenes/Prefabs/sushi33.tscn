@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b148pf76opm7s"]
+
+[ext_resource type="Script" path="res://Player/sushi.gd" id="1_vvw10"]
+[ext_resource type="Texture2D" uid="uid://beyh7lvoooi4q" path="res://sprites/SushiAssets/sushi_03.png" id="2_48urd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2wk7"]
+size = Vector2(165, 108)
+
+[node name="Sushi" type="RigidBody2D" groups=["Sushi"]]
+collision_layer = 4
+collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_0f4y3")
+gravity_scale = 0.0
+script = ExtResource("1_vvw10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Sushi"]]
+position = Vector2(-0.5, -10)
+shape = SubResource("RectangleShape2D_y2wk7")
+
+[node name="Sushi1" type="Sprite2D" parent="." groups=["Sushi"]]
+z_index = -5
+position = Vector2(0, 0.999992)
+scale = Vector2(3.894, 4)
+texture = ExtResource("2_48urd")
+
+[node name="RayCast2D" type="RayCast2D" parent="." groups=["Sushi"]]
+collision_mask = 7
