@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://dcamctukbb2nv"]
+[gd_scene load_steps=3 format=3 uid="uid://dcamctukbb2nv"]
+
+[ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="1_wkioe"]
+[ext_resource type="PackedScene" uid="uid://bxw886swyr5id" path="res://Player/sushi.tscn" id="2_6kbay"]
 
 [node name="Level1" type="Node2D"]
+
+[node name="StickProjector" parent="." instance=ExtResource("1_wkioe")]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_6kbay")]
+position = Vector2(527, 335)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("2_6kbay")]
+position = Vector2(776, 379)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("2_6kbay")]
+position = Vector2(1079, 413)
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("2_6kbay")]
+position = Vector2(1387, 464)
