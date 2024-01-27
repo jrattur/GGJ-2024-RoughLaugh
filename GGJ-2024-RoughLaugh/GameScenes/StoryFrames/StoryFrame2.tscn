@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2ld7fimdcos7"]
+
+[ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame2.gd" id="1_3f3nj"]
+
+[node name="StoryCutscene" type="Node2D"]
+script = ExtResource("1_3f3nj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.117647, 0.0862745, 0.0627451, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_top = 500.0
+offset_right = 960.0
+offset_bottom = 550.0
+scale = Vector2(2, 2)
+bbcode_enabled = true
+text = "[center]Back to work...[/center]"
