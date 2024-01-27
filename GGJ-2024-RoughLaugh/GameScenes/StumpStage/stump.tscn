@@ -1,24 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwcs1afptea4w"]
+[gd_scene load_steps=7 format=3 uid="uid://bwcs1afptea4w"]
 
 [ext_resource type="Texture2D" uid="uid://dclq56mtjjlea" path="res://sprites/sushi1.png" id="1_23rfo"]
+[ext_resource type="Script" path="res://GameScenes/StumpStage/stump.gd" id="1_fhtgr"]
+[ext_resource type="Texture2D" uid="uid://dkncvqu510gyw" path="res://sprites/stump_red_head.png" id="3_4bd3w"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_48lxk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2wk7"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0ule"]
 size = Vector2(70, 221)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0ryj"]
+size = Vector2(74.0963, 36.3726)
 
 [node name="RigidBody2D" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 15
-physics_material_override = SubResource("PhysicsMaterial_0f4y3")
+physics_material_override = SubResource("PhysicsMaterial_48lxk")
 gravity_scale = 0.0
 linear_damp = 15.0
 angular_damp = 30.505
+script = ExtResource("1_fhtgr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4, -9.5)
-shape = SubResource("RectangleShape2D_y2wk7")
+shape = SubResource("RectangleShape2D_f0ule")
 
-[node name="stump" type="Sprite2D" parent="."]
+[node name="Stump" type="Sprite2D" parent="."]
 scale = Vector2(0.443025, 1.46545)
 texture = ExtResource("1_23rfo")
+
+[node name="RedHead" type="Sprite2D" parent="Stump"]
+visible = false
+position = Vector2(0, 70.9381)
+scale = Vector2(2.49798, 0.60035)
+texture = ExtResource("3_4bd3w")
+
+[node name="Area2D" type="Area2D" parent="Stump/RedHead"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stump/RedHead/Area2D"]
+position = Vector2(8.61753e-07, 1.18638)
+shape = SubResource("RectangleShape2D_j0ryj")

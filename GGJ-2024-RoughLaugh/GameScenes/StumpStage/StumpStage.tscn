@@ -1,40 +1,100 @@
-[gd_scene load_steps=7 format=3 uid="uid://cj2r2hpatjjrh"]
+[gd_scene load_steps=13 format=3 uid="uid://cj2r2hpatjjrh"]
 
-[ext_resource type="Texture2D" uid="uid://b1i4iqpixuy4o" path="res://joel/bg.png" id="1_4vjou"]
-[ext_resource type="PackedScene" uid="uid://boowm3elygwy5" path="res://GameScenes/StumpStage/paper.tscn" id="2_nqkt4"]
-[ext_resource type="PackedScene" uid="uid://bwcs1afptea4w" path="res://GameScenes/StumpStage/stump.tscn" id="3_v28lm"]
-[ext_resource type="PackedScene" uid="uid://sc06dbh5qfeh" path="res://GameScenes/StumpStage/inkpad.tscn" id="4_5jvvc"]
-[ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="5_eq5lo"]
-[ext_resource type="PackedScene" uid="uid://b1w3grpqyvefo" path="res://GameScenes/Prefabs/Wall.tscn" id="6_ej2sl"]
+[ext_resource type="PackedScene" uid="uid://boowm3elygwy5" path="res://GameScenes/StumpStage/paper.tscn" id="2_gdcqm"]
+[ext_resource type="Texture2D" uid="uid://dclq56mtjjlea" path="res://sprites/sushi1.png" id="3_fnsgf"]
+[ext_resource type="Script" path="res://GameScenes/StumpStage/stump.gd" id="5_2v2mq"]
+[ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="5_i25cu"]
+[ext_resource type="Texture2D" uid="uid://dkncvqu510gyw" path="res://sprites/stump_red_head.png" id="6_1djik"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Wall.tscn" id="6_ppde8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2wk7"]
+size = Vector2(269, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owuff"]
+size = Vector2(228, 58)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_48lxk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0ule"]
+size = Vector2(70, 221)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0ryj"]
+size = Vector2(74.0963, 36.3726)
 
 [node name="Doublechopstick" type="Node2D"]
 
-[node name="Bg" type="Sprite2D" parent="."]
-position = Vector2(957.5, 534)
+[node name="Paper" parent="." instance=ExtResource("2_gdcqm")]
+position = Vector2(1567.91, 664.533)
 scale = Vector2(5.98438, 5.93333)
-texture = ExtResource("1_4vjou")
 
-[node name="Paper" parent="Bg" instance=ExtResource("2_nqkt4")]
-position = Vector2(102, 22)
-
-[node name="stump" parent="." instance=ExtResource("3_v28lm")]
-position = Vector2(962, 586)
-
-[node name="inkpad" parent="." instance=ExtResource("4_5jvvc")]
+[node name="inkpad" type="StaticBody2D" parent="."]
 position = Vector2(267, 794)
+collision_layer = 8
+collision_mask = 4
+physics_material_override = SubResource("PhysicsMaterial_0f4y3")
 
-[node name="StickProjector" parent="." instance=ExtResource("5_eq5lo")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inkpad"]
+position = Vector2(0.5, 46.5)
+shape = SubResource("RectangleShape2D_y2wk7")
 
-[node name="Wall" parent="." instance=ExtResource("6_ej2sl")]
+[node name="inkpad" type="Sprite2D" parent="inkpad"]
+scale = Vector2(1.55826, 1.27329)
+texture = ExtResource("3_fnsgf")
+
+[node name="Area2D" type="Area2D" parent="inkpad"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inkpad/Area2D"]
+position = Vector2(2, 7)
+shape = SubResource("RectangleShape2D_owuff")
+
+[node name="Stump" type="RigidBody2D" parent="."]
+position = Vector2(960, 500)
+collision_layer = 4
+collision_mask = 15
+physics_material_override = SubResource("PhysicsMaterial_48lxk")
+gravity_scale = 0.0
+linear_damp = 15.0
+angular_damp = 30.505
+script = ExtResource("5_2v2mq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stump"]
+position = Vector2(-4, -9.5)
+shape = SubResource("RectangleShape2D_f0ule")
+
+[node name="Stump" type="Sprite2D" parent="Stump"]
+scale = Vector2(0.443025, 1.46545)
+texture = ExtResource("3_fnsgf")
+
+[node name="RedHead" type="Sprite2D" parent="Stump/Stump"]
+visible = false
+position = Vector2(0, 70.9381)
+scale = Vector2(2.49798, 0.60035)
+texture = ExtResource("6_1djik")
+
+[node name="Area2D" type="Area2D" parent="Stump/Stump/RedHead"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stump/Stump/RedHead/Area2D"]
+position = Vector2(8.61753e-07, 1.18638)
+shape = SubResource("RectangleShape2D_j0ryj")
+
+[node name="StickProjector" parent="." instance=ExtResource("5_i25cu")]
+
+[node name="Wall" parent="." instance=ExtResource("6_ppde8")]
 position = Vector2(932, 1161)
 
-[node name="Wall2" parent="." instance=ExtResource("6_ej2sl")]
+[node name="Wall2" parent="." instance=ExtResource("6_ppde8")]
 position = Vector2(944, -94)
 
-[node name="Wall3" parent="." instance=ExtResource("6_ej2sl")]
+[node name="Wall3" parent="." instance=ExtResource("6_ppde8")]
 position = Vector2(-100, 521)
 rotation = 1.56747
 
-[node name="Wall4" parent="." instance=ExtResource("6_ej2sl")]
+[node name="Wall4" parent="." instance=ExtResource("6_ppde8")]
 position = Vector2(2033, 659)
 rotation = 1.55994
+
+[connection signal="body_entered" from="inkpad/Area2D" to="Stump" method="_on_area_2d_body_entered"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://cj2r2hpatjjrh"]
+
+[ext_resource type="Texture2D" uid="uid://b1i4iqpixuy4o" path="res://joel/bg.png" id="1_llxru"]
+[ext_resource type="PackedScene" uid="uid://boowm3elygwy5" path="res://GameScenes/StumpStage/paper.tscn" id="2_gdcqm"]
+[ext_resource type="PackedScene" uid="uid://bwcs1afptea4w" path="res://GameScenes/StumpStage/stump.tscn" id="3_ew1a0"]
+[ext_resource type="PackedScene" uid="uid://sc06dbh5qfeh" path="res://GameScenes/StumpStage/inkpad.tscn" id="4_en640"]
+[ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="5_i25cu"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Wall.tscn" id="6_ppde8"]
+
+[node name="Doublechopstick" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(957.5, 534)
+scale = Vector2(5.98438, 5.93333)
+texture = ExtResource("1_llxru")
+
+[node name="Paper" parent="Bg" instance=ExtResource("2_gdcqm")]
+position = Vector2(102, 22)
+
+[node name="inkpad" parent="." instance=ExtResource("4_en640")]
+position = Vector2(267, 794)
+
+[node name="stump" parent="." instance=ExtResource("3_ew1a0")]
+position = Vector2(962, 586)
+
+[node name="StickProjector" parent="." instance=ExtResource("5_i25cu")]
+
+[node name="Wall" parent="." instance=ExtResource("6_ppde8")]
+position = Vector2(932, 1161)
+
+[node name="Wall2" parent="." instance=ExtResource("6_ppde8")]
+position = Vector2(944, -94)
+
+[node name="Wall3" parent="." instance=ExtResource("6_ppde8")]
+position = Vector2(-100, 521)
+rotation = 1.56747
+
+[node name="Wall4" parent="." instance=ExtResource("6_ppde8")]
+position = Vector2(2033, 659)
+rotation = 1.55994

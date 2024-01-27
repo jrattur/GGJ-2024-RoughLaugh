@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="1_wkioe"]
 [ext_resource type="PackedScene" uid="uid://bxw886swyr5id" path="res://Player/sushi.tscn" id="2_6kbay"]
-[ext_resource type="PackedScene" uid="uid://b1w3grpqyvefo" path="res://GameScenes/Prefabs/Wall.tscn" id="3_gjgfo"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Wall.tscn" id="3_gjgfo"]
 [ext_resource type="Texture2D" uid="uid://b52wd7nmp3kix" path="res://sprites/plate2.png" id="4_qw0ep"]
-[ext_resource type="PackedScene" uid="uid://burb5qstcfxes" path="res://GameScenes/Prefabs/Dudeman.tscn" id="6_ansuc"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Dudeman.tscn" id="6_ansuc"]
 [ext_resource type="Script" path="res://GameScenes/Level1/Level1Manager.gd" id="6_np52r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bm5ex"]
