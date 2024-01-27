@@ -15,6 +15,7 @@ run/main_scene="res://joel/doublechopstick.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+<<<<<<< HEAD
 [display]
 
 window/size/viewport_width=320
@@ -72,6 +73,8 @@ r_move_down={
 2d_physics/layer_2="player"
 2d_physics/layer_3="objects"
 
+=======
+>>>>>>> c3c2ed5b6c76082a400fc3e34763d9bd949f2b7d
 [rendering]
 
 renderer/rendering_method="mobile"

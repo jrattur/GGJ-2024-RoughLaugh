@@ -26,11 +26,4 @@ offset_right = 683.0
 offset_bottom = 525.0
 text = "About"
 
-[node name="Window" type="Window" parent="."]
-position = Vector2i(0, 36)
-
-[node name="Label" type="Label" parent="Window"]
-offset_right = 40.0
-offset_bottom = 23.0
-
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

@@ -1,7 +1,6 @@
-extends Sprite2D
+extends CharacterBody2D
 
-var speed = 200  
-var velocity = Vector2()
+var speed = 200
 
 func _physics_process(delta):
 	velocity.x = 0
