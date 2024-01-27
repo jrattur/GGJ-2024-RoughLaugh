@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://sc06dbh5qfeh"]
+
+[ext_resource type="Texture2D" uid="uid://dclq56mtjjlea" path="res://sprites/sushi1.png" id="1_xvuwd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2wk7"]
+size = Vector2(269, 79)
+
+[node name="RigidBody2D" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 4
+physics_material_override = SubResource("PhysicsMaterial_0f4y3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 46.5)
+shape = SubResource("RectangleShape2D_y2wk7")
+
+[node name="inkpad" type="Sprite2D" parent="."]
+scale = Vector2(1.55826, 1.27329)
+texture = ExtResource("1_xvuwd")
