@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnwymux4if14n"]
+
+[ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="1_nrsav"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Wall.tscn" id="2_ei0uv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5tvys"]
+radius = 62.6259
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pg3s"]
+size = Vector2(61.7848, 22.1511)
+
+[node name="DoorStage" type="Node2D"]
+
+[node name="StickProjector" parent="." instance=ExtResource("1_nrsav")]
+
+[node name="Wall" parent="." instance=ExtResource("2_ei0uv")]
+position = Vector2(932, 1161)
+
+[node name="Wall2" parent="." instance=ExtResource("2_ei0uv")]
+position = Vector2(944, -94)
+
+[node name="Wall3" parent="." instance=ExtResource("2_ei0uv")]
+position = Vector2(-100, 521)
+rotation = 1.56747
+
+[node name="Wall4" parent="." instance=ExtResource("2_ei0uv")]
+position = Vector2(2033, 659)
+rotation = 1.55994
+
+[node name="DoorNob" type="Node2D" parent="."]
+position = Vector2(1175, 603)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="DoorNob"]
+node_a = NodePath("Pin")
+node_b = NodePath("Bar")
+bias = 0.9
+angular_limit_enabled = true
+angular_limit_lower = -1.5708
+motor_target_velocity = 1.53484
+
+[node name="Pin" type="RigidBody2D" parent="DoorNob/PinJoint2D"]
+collision_mask = 3
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorNob/PinJoint2D/Pin"]
+shape = SubResource("CircleShape2D_5tvys")
+
+[node name="Bar" type="RigidBody2D" parent="DoorNob/PinJoint2D"]
+collision_layer = 4
+collision_mask = 7
+gravity_scale = 0.0
+angular_damp = 31.626
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorNob/PinJoint2D/Bar"]
+position = Vector2(-159.335, 0)
+scale = Vector2(6.36614, 3.12729)
+shape = SubResource("RectangleShape2D_1pg3s")
