@@ -17,5 +17,6 @@ shape = SubResource("RectangleShape2D_bm5ex")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -8
+texture_filter = 1
 scale = Vector2(4, 4)
 texture = ExtResource("1_j1n1m")
