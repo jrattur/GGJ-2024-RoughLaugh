@@ -69,6 +69,7 @@ position = Vector2(-25.1111, -6.22222)
 texture = ExtResource("4_gpe7g")
 
 [node name="Area2D" type="Area2D" parent="Inkpad"]
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inkpad/Area2D"]
 position = Vector2(94.5, 55)
