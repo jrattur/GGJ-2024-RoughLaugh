@@ -1,29 +1,87 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2x6cdp8hd0se"]
+[gd_scene load_steps=10 format=3 uid="uid://c2x6cdp8hd0se"]
 
 [ext_resource type="Script" path="res://GameScenes/MainMenu/MainMenu.gd" id="1_gukeq"]
-[ext_resource type="Texture2D" uid="uid://emfu7345l1lp" path="res://sprites/final-assets-kinda/title.png" id="2_fxc5t"]
+[ext_resource type="Texture2D" uid="uid://bxnouecg03et4" path="res://sprites/UIAssets/menu-background.png" id="2_b1tc5"]
+[ext_resource type="Texture2D" uid="uid://dxc30366icopk" path="res://sprites/UIAssets/game-title.png" id="3_qn1ot"]
+[ext_resource type="Texture2D" uid="uid://bno4x2v06h3wh" path="res://sprites/UIAssets/play-button.png" id="4_esv8y"]
+[ext_resource type="Texture2D" uid="uid://daq3hu0gq43f" path="res://sprites/UIAssets/play-button-hover.png" id="5_wff0r"]
+[ext_resource type="Texture2D" uid="uid://mxt0kme7363j" path="res://sprites/UIAssets/play-button-pressed.png" id="6_2kqht"]
+[ext_resource type="Texture2D" uid="uid://d4mujl1n4y7g6" path="res://sprites/UIAssets/about-button.png" id="7_s5dlw"]
+[ext_resource type="Texture2D" uid="uid://cavl8mx2yivq7" path="res://sprites/UIAssets/about-button-hover.png" id="8_qo2fu"]
+[ext_resource type="Texture2D" uid="uid://b003x73g3dbr8" path="res://sprites/UIAssets/about-button-pressed.png" id="9_qs8en"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_gukeq")
 
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_b1tc5")
+
+[node name="Title" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 189.0
+offset_top = 80.0
+offset_right = 1731.0
+offset_bottom = 320.0
+texture = ExtResource("3_qn1ot")
+
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 814.0
-offset_top = 478.0
-offset_right = 1018.0
-offset_bottom = 527.0
-text = "Play"
+offset_left = 750.0
+offset_top = 480.0
+offset_right = 1170.0
+offset_bottom = 620.0
+flat = true
+
+[node name="PlayIdle" type="Sprite2D" parent="PlayButton"]
+texture_filter = 1
+position = Vector2(210, 70)
+scale = Vector2(6, 6)
+texture = ExtResource("4_esv8y")
+
+[node name="PlayOnHover" type="Sprite2D" parent="PlayButton"]
+texture_filter = 1
+position = Vector2(210, 70)
+scale = Vector2(6, 6)
+texture = ExtResource("5_wff0r")
+
+[node name="PlayOnPressed" type="Sprite2D" parent="PlayButton"]
+texture_filter = 1
+position = Vector2(210, 70)
+scale = Vector2(6, 6)
+texture = ExtResource("6_2kqht")
 
 [node name="AboutButton" type="Button" parent="."]
-offset_left = 816.0
-offset_top = 595.0
-offset_right = 1020.0
-offset_bottom = 644.0
-text = "About"
+offset_left = 750.0
+offset_top = 720.0
+offset_right = 1170.0
+offset_bottom = 860.0
+flat = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AboutIdle" type="Sprite2D" parent="AboutButton"]
 texture_filter = 1
-position = Vector2(960, 300)
-scale = Vector2(4, 4)
-texture = ExtResource("2_fxc5t")
+position = Vector2(210, 70)
+scale = Vector2(6, 6)
+texture = ExtResource("7_s5dlw")
 
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[node name="AboutOnHover" type="Sprite2D" parent="AboutButton"]
+texture_filter = 1
+position = Vector2(210, 70)
+scale = Vector2(6, 6)
+texture = ExtResource("8_qo2fu")
+
+[node name="AboutOnPressed" type="Sprite2D" parent="AboutButton"]
+texture_filter = 1
+position = Vector2(210, 70)
+scale = Vector2(6, 6)
+texture = ExtResource("9_qs8en")
+
+[connection signal="button_down" from="PlayButton" to="." method="_on_play_button_button_down"]
+[connection signal="button_up" from="PlayButton" to="." method="_on_play_button_button_up"]
+[connection signal="mouse_entered" from="PlayButton" to="." method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="PlayButton" to="." method="_on_play_button_mouse_exited"]
+[connection signal="button_down" from="AboutButton" to="." method="_on_about_button_button_down"]
+[connection signal="button_up" from="AboutButton" to="." method="_on_about_button_button_up"]
+[connection signal="mouse_entered" from="AboutButton" to="." method="_on_about_button_mouse_entered"]
+[connection signal="mouse_exited" from="AboutButton" to="." method="_on_about_button_mouse_exited"]
