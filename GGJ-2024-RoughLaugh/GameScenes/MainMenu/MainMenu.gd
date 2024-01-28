@@ -6,6 +6,7 @@ var playOnPressed: Sprite2D
 var aboutIdle: Sprite2D
 var aboutOnHover: Sprite2D
 var aboutOnPressed: Sprite2D
+var aboutPage: ColorRect
 
 func _ready():
 	playIdle = $PlayButton/PlayIdle
@@ -14,12 +15,14 @@ func _ready():
 	aboutIdle = $AboutButton/AboutIdle
 	aboutOnHover = $AboutButton/AboutOnHover
 	aboutOnPressed = $AboutButton/AboutOnPressed
+	aboutPage = $AboutPage
 	playIdle.visible = true
 	playOnHover.visible = false
 	playOnPressed.visible = false
 	aboutIdle.visible = true
 	aboutOnHover.visible = false
 	aboutOnPressed.visible = false
+	aboutPage.visible = false
 
 func _process(delta):
 	pass
@@ -53,7 +56,7 @@ func _on_about_button_button_down():
 
 
 func _on_about_button_button_up():
-	pass # Replace with function body.
+	aboutPage.visible = true
 
 
 func _on_about_button_mouse_entered():
@@ -66,3 +69,7 @@ func _on_about_button_mouse_exited():
 	aboutIdle.visible = true
 	aboutOnHover.visible = false
 	aboutOnPressed.visible = false
+
+
+func _on_go_back_button_pressed():
+	aboutPage.visible = false

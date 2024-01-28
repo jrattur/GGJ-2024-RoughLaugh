@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2x6cdp8hd0se"]
+[gd_scene load_steps=11 format=3 uid="uid://c2x6cdp8hd0se"]
 
 [ext_resource type="Script" path="res://GameScenes/MainMenu/MainMenu.gd" id="1_gukeq"]
 [ext_resource type="Texture2D" uid="uid://bxnouecg03et4" path="res://sprites/UIAssets/menu-background.png" id="2_b1tc5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d4mujl1n4y7g6" path="res://sprites/UIAssets/about-button.png" id="7_s5dlw"]
 [ext_resource type="Texture2D" uid="uid://cavl8mx2yivq7" path="res://sprites/UIAssets/about-button-hover.png" id="8_qo2fu"]
 [ext_resource type="Texture2D" uid="uid://b003x73g3dbr8" path="res://sprites/UIAssets/about-button-pressed.png" id="9_qs8en"]
+[ext_resource type="FontFile" uid="uid://ipba56p7yaqq" path="res://Fonts/Stick-Regular.ttf" id="10_28xit"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_gukeq")
@@ -79,6 +80,78 @@ position = Vector2(210, 70)
 scale = Vector2(6, 6)
 texture = ExtResource("9_qs8en")
 
+[node name="AboutPage" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.117647, 0.0862745, 0.0627451, 0.972549)
+
+[node name="AboutTitle" type="Label" parent="AboutPage"]
+layout_mode = 0
+offset_top = 44.0
+offset_right = 1920.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("10_28xit")
+theme_override_font_sizes/font_size = 135
+text = "ABOUT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AboutText" type="Label" parent="AboutPage"]
+layout_mode = 0
+offset_top = 290.0
+offset_right = 1920.0
+offset_bottom = 590.0
+theme_override_fonts/font = ExtResource("10_28xit")
+theme_override_font_sizes/font_size = 60
+text = "Made with ❤️ by Rough Laugh.
+Global Game Jam 2024."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NamesLeft" type="Label" parent="AboutPage"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 569.0
+offset_right = 780.0
+offset_bottom = 869.0
+theme_override_fonts/font = ExtResource("10_28xit")
+theme_override_font_sizes/font_size = 60
+text = "kitymade
+Joel Rattur
+crispydosa"
+horizontal_alignment = 1
+
+[node name="NamesRight" type="Label" parent="AboutPage"]
+layout_mode = 0
+offset_left = 1140.0
+offset_top = 569.0
+offset_right = 1740.0
+offset_bottom = 869.0
+theme_override_fonts/font = ExtResource("10_28xit")
+theme_override_font_sizes/font_size = 60
+text = "OkiOkiPanic
+AcidCookie"
+horizontal_alignment = 1
+
+[node name="NamesRight2" type="Label" parent="AboutPage"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 970.0
+offset_right = 1260.0
+offset_bottom = 1060.0
+theme_override_fonts/font = ExtResource("10_28xit")
+theme_override_font_sizes/font_size = 40
+text = "Click anywhere to go back."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoBackButton" type="Button" parent="AboutPage"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+flat = true
+
 [connection signal="button_down" from="PlayButton" to="." method="_on_play_button_button_down"]
 [connection signal="button_up" from="PlayButton" to="." method="_on_play_button_button_up"]
 [connection signal="mouse_entered" from="PlayButton" to="." method="_on_play_button_mouse_entered"]
@@ -87,3 +160,4 @@ texture = ExtResource("9_qs8en")
 [connection signal="button_up" from="AboutButton" to="." method="_on_about_button_button_up"]
 [connection signal="mouse_entered" from="AboutButton" to="." method="_on_about_button_mouse_entered"]
 [connection signal="mouse_exited" from="AboutButton" to="." method="_on_about_button_mouse_exited"]
+[connection signal="pressed" from="AboutPage/GoBackButton" to="." method="_on_go_back_button_pressed"]
