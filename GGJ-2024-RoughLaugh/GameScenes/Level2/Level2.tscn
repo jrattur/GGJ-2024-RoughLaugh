@@ -1,13 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnwymux4if14n"]
+[gd_scene load_steps=9 format=3 uid="uid://dnwymux4if14n"]
 
 [ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="1_nrsav"]
 [ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Wall.tscn" id="2_ei0uv"]
+[ext_resource type="Script" path="res://GameScenes/Level2/Bar.gd" id="3_a27ec"]
+[ext_resource type="Texture2D" uid="uid://c7py8rym4e31p" path="res://sprites/doorBar.png" id="4_fu7go"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5tvys"]
 radius = 62.6259
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pg3s"]
-size = Vector2(61.7848, 22.1511)
+size = Vector2(56.1298, 17.4709)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qvg8"]
+size = Vector2(55.7631, 272.242)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7tm0"]
+size = Vector2(526, 545)
 
 [node name="DoorStage" type="Node2D"]
 
@@ -34,9 +42,7 @@ position = Vector2(1175, 603)
 node_a = NodePath("Pin")
 node_b = NodePath("Bar")
 bias = 0.9
-angular_limit_enabled = true
 angular_limit_lower = -1.5708
-motor_target_velocity = 1.53484
 
 [node name="Pin" type="RigidBody2D" parent="DoorNob/PinJoint2D"]
 collision_mask = 3
@@ -47,11 +53,36 @@ shape = SubResource("CircleShape2D_5tvys")
 
 [node name="Bar" type="RigidBody2D" parent="DoorNob/PinJoint2D"]
 collision_layer = 4
-collision_mask = 7
+collision_mask = 23
 gravity_scale = 0.0
 angular_damp = 31.626
+script = ExtResource("3_a27ec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorNob/PinJoint2D/Bar"]
-position = Vector2(-159.335, 0)
+position = Vector2(-141.335, -7.31824)
 scale = Vector2(6.36614, 3.12729)
 shape = SubResource("RectangleShape2D_1pg3s")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorNob/PinJoint2D/Bar"]
+position = Vector2(-132, 15)
+texture = ExtResource("4_fu7go")
+
+[node name="Stopper" type="StaticBody2D" parent="DoorNob"]
+position = Vector2(-248, -59)
+collision_layer = 16
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorNob/Stopper"]
+position = Vector2(207.093, -270)
+scale = Vector2(11.5814, 2.05699)
+shape = SubResource("RectangleShape2D_7qvg8")
+
+[node name="Stopper2" type="StaticBody2D" parent="DoorNob"]
+position = Vector2(60, 232)
+collision_layer = 16
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorNob/Stopper2"]
+position = Vector2(253, 87.5)
+scale = Vector2(0.965007, 0.967737)
+shape = SubResource("RectangleShape2D_o7tm0")

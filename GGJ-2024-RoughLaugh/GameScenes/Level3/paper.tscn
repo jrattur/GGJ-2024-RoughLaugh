@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://boowm3elygwy5"]
 
 [ext_resource type="Texture2D" uid="uid://ee6xnao7tfwk" path="res://sprites/document_contract.png" id="1_i4xlt"]
-[ext_resource type="Script" path="res://GameScenes/StumpStage/paper.gd" id="2_0ibl5"]
+[ext_resource type="Script" path="res://GameScenes/Level3/paper.gd" id="2_0ibl5"]
 [ext_resource type="Texture2D" uid="uid://bbtbpv4lm2ro6" path="res://sprites/stumpSign.png" id="2_mluh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xlkwl"]

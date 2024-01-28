@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=3 uid="uid://cj2r2hpatjjrh"]
+
+[ext_resource type="PackedScene" uid="uid://boowm3elygwy5" path="res://GameScenes/Level3/paper.tscn" id="1_ip1jq"]
+[ext_resource type="Texture2D" uid="uid://dclq56mtjjlea" path="res://sprites/sushi1.png" id="2_wkn4t"]
+[ext_resource type="Script" path="res://GameScenes/Level3/stump.gd" id="3_dcpev"]
+[ext_resource type="Texture2D" uid="uid://dkncvqu510gyw" path="res://sprites/stump_red_head.png" id="4_nhx1p"]
+[ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="5_uqhpj"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Wall.tscn" id="6_gnuch"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2wk7"]
+size = Vector2(269, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owuff"]
+size = Vector2(228, 58)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_48lxk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0ule"]
+size = Vector2(70, 221)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0ryj"]
+size = Vector2(74.0963, 36.3726)
+
+[node name="Doublechopstick" type="Node2D"]
+
+[node name="Paper" parent="." instance=ExtResource("1_ip1jq")]
+position = Vector2(1567.91, 664.533)
+scale = Vector2(5.98438, 5.93333)
+
+[node name="inkpad" type="StaticBody2D" parent="."]
+position = Vector2(267, 794)
+collision_layer = 8
+collision_mask = 4
+physics_material_override = SubResource("PhysicsMaterial_0f4y3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inkpad"]
+position = Vector2(0.5, 46.5)
+shape = SubResource("RectangleShape2D_y2wk7")
+
+[node name="inkpad" type="Sprite2D" parent="inkpad"]
+scale = Vector2(1.55826, 1.27329)
+texture = ExtResource("2_wkn4t")
+
+[node name="Area2D" type="Area2D" parent="inkpad"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inkpad/Area2D"]
+position = Vector2(2, 7)
+shape = SubResource("RectangleShape2D_owuff")
+
+[node name="Stump" type="RigidBody2D" parent="."]
+position = Vector2(960, 500)
+collision_layer = 4
+collision_mask = 15
+physics_material_override = SubResource("PhysicsMaterial_48lxk")
+gravity_scale = 0.0
+linear_damp = 15.0
+angular_damp = 30.505
+script = ExtResource("3_dcpev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stump"]
+position = Vector2(-4, -9.5)
+shape = SubResource("RectangleShape2D_f0ule")
+
+[node name="Stump" type="Sprite2D" parent="Stump"]
+scale = Vector2(0.443025, 1.46545)
+texture = ExtResource("2_wkn4t")
+
+[node name="RedHead" type="Sprite2D" parent="Stump/Stump"]
+visible = false
+position = Vector2(0, 70.9381)
+scale = Vector2(2.49798, 0.60035)
+texture = ExtResource("4_nhx1p")
+
+[node name="Area2D" type="Area2D" parent="Stump/Stump/RedHead"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stump/Stump/RedHead/Area2D"]
+position = Vector2(8.61753e-07, 1.18638)
+shape = SubResource("RectangleShape2D_j0ryj")
+
+[node name="StickProjector" parent="." instance=ExtResource("5_uqhpj")]
+
+[node name="Wall" parent="." instance=ExtResource("6_gnuch")]
+position = Vector2(932, 1161)
+
+[node name="Wall2" parent="." instance=ExtResource("6_gnuch")]
+position = Vector2(944, -94)
+
+[node name="Wall3" parent="." instance=ExtResource("6_gnuch")]
+position = Vector2(-100, 521)
+rotation = 1.56747
+
+[node name="Wall4" parent="." instance=ExtResource("6_gnuch")]
+position = Vector2(2033, 659)
+rotation = 1.55994
+
+[connection signal="body_entered" from="inkpad/Area2D" to="Stump" method="_on_area_2d_body_entered"]
