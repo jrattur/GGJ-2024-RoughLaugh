@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvd8ke054lchr"]
+[gd_scene load_steps=4 format=3 uid="uid://bl3cru1vssck8"]
 
 [ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame3.gd" id="1_jwdtp"]
 [ext_resource type="FontFile" uid="uid://ipba56p7yaqq" path="res://Fonts/Stick-Regular.ttf" id="2_s0bka"]
-[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/BGM.tscn" id="3_kams2"]
+[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/BGM.tscn" id="3_kams2"]
 
 [node name="StoryFrame3" type="Node2D"]
 script = ExtResource("1_jwdtp")
