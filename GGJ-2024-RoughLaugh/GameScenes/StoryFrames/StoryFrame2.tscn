@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2ld7fimdcos7"]
+[gd_scene load_steps=3 format=3 uid="uid://d2ld7fimdcos7"]
 
 [ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame2.gd" id="1_3f3nj"]
+[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/BGM.tscn" id="2_smupv"]
 
 [node name="StoryFrame2" type="Node2D"]
 script = ExtResource("1_3f3nj")
@@ -18,3 +19,5 @@ offset_bottom = 550.0
 scale = Vector2(2, 2)
 bbcode_enabled = true
 text = "[center]That was delicious... time to head back to work![/center]"
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("2_smupv")]

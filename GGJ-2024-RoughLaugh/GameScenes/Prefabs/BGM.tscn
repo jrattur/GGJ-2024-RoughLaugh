@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmbt8qhgxwsrk"]
+
+[ext_resource type="AudioStream" uid="uid://d3q3ebonjji6m" path="res://Sound/global_game_jam_new.mp3" id="1_25821"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_25821")
+volume_db = -20.0
+autoplay = true
