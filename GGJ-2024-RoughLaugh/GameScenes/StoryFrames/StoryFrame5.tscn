@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bl3cru1vssck8"]
+[gd_scene load_steps=4 format=3 uid="uid://bl3cru1vssck8"]
 
 [ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame5.gd" id="1_yo4al"]
 [ext_resource type="Texture2D" uid="uid://gr8m66dmo1n1" path="res://sprites/thanks_for_playing.png" id="2_npim7"]
+[ext_resource type="FontFile" uid="uid://ipba56p7yaqq" path="res://Fonts/Stick-Regular.ttf" id="2_xpdrp"]
 
 [node name="StoryFrame5" type="Node2D"]
 script = ExtResource("1_yo4al")
 
 [node name="ColorRect" type="TextureRect" parent="."]
+texture_filter = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_npim7")
@@ -16,5 +18,18 @@ self_modulate = Color(1, 1, 1, 0)
 offset_right = 1920.0
 offset_bottom = 1080.0
 flat = true
+
+[node name="Text" type="Label" parent="."]
+texture_filter = 1
+offset_left = -443.0
+offset_top = -63.0
+offset_right = 1477.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0.94902, 0.733333, 0.305882, 1)
+theme_override_fonts/font = ExtResource("2_xpdrp")
+theme_override_font_sizes/font_size = 60
+text = "Click anywhere to go to the menu."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
