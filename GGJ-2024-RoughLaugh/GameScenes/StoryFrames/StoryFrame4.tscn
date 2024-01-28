@@ -14,12 +14,13 @@ color = Color(0.117647, 0.0862745, 0.0627451, 1)
 
 [node name="Text" type="Label" parent="."]
 texture_filter = 1
-offset_top = 500.0
+offset_top = 408.0
 offset_right = 1920.0
-offset_bottom = 617.0
+offset_bottom = 645.0
 theme_override_fonts/font = ExtResource("2_xpdrp")
 theme_override_font_sizes/font_size = 80
-text = "The work won't do itself, I hope this makes her/them laugh."
+text = "The work won't do itself, 
+I hope this makes her laugh."
 horizontal_alignment = 1
 vertical_alignment = 1
 
