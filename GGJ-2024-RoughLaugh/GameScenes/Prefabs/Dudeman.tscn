@@ -1,23 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://burb5qstcfxes"]
+[gd_scene load_steps=10 format=3 uid="uid://burb5qstcfxes"]
 
 [ext_resource type="Texture2D" uid="uid://o255o8vje82m" path="res://sprites/UI_Hashimoto_Face_sheet_80x80.png" id="1_e8jl4"]
 [ext_resource type="Script" path="res://GameScenes/Prefabs/Dudeman.gd" id="1_pnls8"]
-
-[sub_resource type="Animation" id="Animation_ynbdm"]
-resource_name = "hungry"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
 
 [sub_resource type="Animation" id="Animation_fswc0"]
 resource_name = "eating"
@@ -35,10 +19,79 @@ tracks/0/keys = {
 "values": [2, 3, 4, 3]
 }
 
+[sub_resource type="Animation" id="Animation_ynbdm"]
+resource_name = "hungry"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_coqom"]
+resource_name = "idle"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 5, 7]
+}
+
+[sub_resource type="Animation" id="Animation_r5c72"]
+resource_name = "happy"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_adfra"]
+resource_name = "nervous"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 10, 12]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8xj65"]
 _data = {
 "eating": SubResource("Animation_fswc0"),
-"hungry": SubResource("Animation_ynbdm")
+"happy": SubResource("Animation_r5c72"),
+"hungry": SubResource("Animation_ynbdm"),
+"idle": SubResource("Animation_coqom"),
+"nervous": SubResource("Animation_adfra")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xvr4m"]
@@ -67,6 +120,6 @@ texture_filter = 1
 texture = ExtResource("1_e8jl4")
 hframes = 4
 vframes = 4
-frame = 3
+frame = 10
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
