@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://xofoufhhqxos" path="res://GameScenes/Prefabs/Wall.tscn" id="6_gnuch"]
 [ext_resource type="Texture2D" uid="uid://dqwcnho8pxxs4" path="res://sprites/hanko_inkwell.png" id="7_4gw6o"]
 [ext_resource type="PackedScene" path="res://GameScenes/Prefabs/DudemanLevel2.tscn" id="9_vpw48"]
-[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/BGM.tscn" id="10_1pdmm"]
+[ext_resource type="PackedScene" uid="uid://nxi1jssfqrt2" path="res://GameScenes/Prefabs/StageBGM.tscn" id="10_73jkr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]
 
@@ -118,6 +118,6 @@ shape = SubResource("RectangleShape2D_j0ryj")
 [node name="StickProjector" parent="." instance=ExtResource("5_uqhpj")]
 texture_filter = 1
 
-[node name="AudioStreamPlayer" parent="." instance=ExtResource("10_1pdmm")]
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("10_73jkr")]
 
 [connection signal="body_entered" from="Inkpad/Area2D" to="Stump" method="_on_area_2d_body_entered"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://nxi1jssfqrt2"]
+
+[ext_resource type="AudioStream" uid="uid://bv2svbfi7ei86" path="res://Sound/global_game_jam_2024_-_2024128_14.02.mp3" id="1_nhu34"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_nhu34")
+volume_db = -5.0
+autoplay = true

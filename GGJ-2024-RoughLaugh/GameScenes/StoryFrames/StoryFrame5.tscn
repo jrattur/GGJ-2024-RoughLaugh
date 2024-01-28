@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame5.gd" id="1_yo4al"]
 [ext_resource type="Texture2D" uid="uid://s8p5ep75p4ap" path="res://sprites/thanks_for_playing.png" id="2_npim7"]
 [ext_resource type="FontFile" uid="uid://ipba56p7yaqq" path="res://Fonts/Stick-Regular.ttf" id="2_xpdrp"]
-[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/BGM.tscn" id="4_yopu8"]
+[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/DialogeBGM.tscn" id="4_yopu8"]
 
 [node name="StoryFrame5" type="Node2D"]
 script = ExtResource("1_yo4al")

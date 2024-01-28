@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GameScenes/StoryFrames/ComicFrame.gd" id="1_ouegf"]
 [ext_resource type="Texture2D" uid="uid://c61nh1wc7a6f1" path="res://sprites/Comic/comic.png" id="2_1wiwb"]
-[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/BGM.tscn" id="3_3faj0"]
+[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/DialogeBGM.tscn" id="3_3faj0"]
 
 [node name="ComicFrame" type="Node2D"]
 script = ExtResource("1_ouegf")
