@@ -1,13 +1,13 @@
 extends Node2D
 
 var scroll_speed = 500
-var scroll_limit = - 4320 + 1080 - 100
+var scroll_limit = - 3240 + 1080 - 100
 # 4320 would be the height of the image, 1080 is the end buffer and 100 pixels to give room for the button
 
 func _process(delta):
-	if Input.is_action_pressed("r_move_up"):
+	if Input.is_action_pressed("r_move_down"):
 		scroll_image(delta)
-	elif Input.is_action_pressed("r_move_down"):
+	elif Input.is_action_pressed("r_move_up"):
 		scroll_image(-delta)
 		
 
