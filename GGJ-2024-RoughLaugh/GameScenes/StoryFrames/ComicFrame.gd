@@ -26,4 +26,4 @@ func _ready():
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://GameScenes/StoryFrames/StoryFrame3.tscn")
+	get_tree().change_scene_to_file("res://GameScenes/Level2/Level2.tscn")

@@ -43,6 +43,9 @@ rotation = 1.56747
 position = Vector2(2033, 659)
 rotation = 1.55994
 
+[node name="Dudeman" parent="." instance=ExtResource("9_vpw48")]
+position = Vector2(225, 221)
+
 [node name="Inkpad" type="StaticBody2D" parent="."]
 position = Vector2(374, 816)
 collision_layer = 8
@@ -106,9 +109,6 @@ position = Vector2(-1.38005, -1.23039)
 shape = SubResource("RectangleShape2D_j0ryj")
 
 [node name="StickProjector" parent="." instance=ExtResource("5_uqhpj")]
-
-[node name="Dudeman" parent="." instance=ExtResource("9_vpw48")]
-position = Vector2(225, 221)
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("10_1pdmm")]
 
