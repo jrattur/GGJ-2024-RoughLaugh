@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://6glg2m67852o"]
+[gd_scene load_steps=8 format=3 uid="uid://6glg2m67852o"]
 
 [ext_resource type="Script" path="res://GameScenes/Prefabs/StickProjector.gd" id="1_toxxn"]
 [ext_resource type="Script" path="res://Meka/LeftChopstickHead.gd" id="2_dv1p2"]
+[ext_resource type="Curve" uid="uid://bq8j6i1c7kfnw" path="res://WidthCurve.tres" id="2_us0tc"]
 [ext_resource type="Texture2D" uid="uid://cenny8trbl2a4" path="res://sprites/final-assets-kinda/chopstick-head.png" id="3_2m82w"]
 [ext_resource type="Script" path="res://Meka/RightChopstickHead.gd" id="4_s525r"]
 
@@ -12,6 +13,20 @@
 [node name="StickProjector" type="Node2D"]
 script = ExtResource("1_toxxn")
 
+[node name="LeftChopstick" type="Line2D" parent="."]
+width = 36.0
+width_curve = ExtResource("2_us0tc")
+default_color = Color(1, 0.560784, 0.27451, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="RightChopstick" type="Line2D" parent="."]
+width = 36.0
+width_curve = ExtResource("2_us0tc")
+default_color = Color(1, 0.560784, 0.27451, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
 [node name="LeftChopstickHead" type="CharacterBody2D" parent="."]
 position = Vector2(256, 759)
 script = ExtResource("2_dv1p2")
@@ -19,7 +34,7 @@ script = ExtResource("2_dv1p2")
 [node name="LeftChopstickSprite" type="Sprite2D" parent="LeftChopstickHead"]
 z_index = 10
 position = Vector2(2.08165e-12, 2.08165e-12)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_2m82w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftChopstickHead"]
@@ -32,9 +47,15 @@ script = ExtResource("4_s525r")
 
 [node name="RightChopstickSprite" type="Sprite2D" parent="RightChopstickHead"]
 z_index = 10
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_2m82w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightChopstickHead"]
 scale = Vector2(1.2, 1.2)
 shape = SubResource("CircleShape2D_ij4qu")
+
+[node name="LeftChopstickBase" type="Node2D" parent="."]
+position = Vector2(120, 900)
+
+[node name="RightChopstickBase" type="Node2D" parent="."]
+position = Vector2(1800, 900)
