@@ -17,8 +17,7 @@ collision_layer = 4
 collision_mask = 15
 physics_material_override = SubResource("PhysicsMaterial_48lxk")
 gravity_scale = 0.0
-linear_damp = 15.0
-angular_damp = 30.505
+linear_damp = 5.0
 script = ExtResource("1_fhtgr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
