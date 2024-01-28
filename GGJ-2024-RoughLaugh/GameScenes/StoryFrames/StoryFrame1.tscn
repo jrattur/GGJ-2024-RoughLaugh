@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://5t5rebw56tyh"]
+[gd_scene load_steps=3 format=3 uid="uid://5t5rebw56tyh"]
 
 [ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame1.gd" id="1_qk6ui"]
+[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/BGM.tscn" id="2_xt16k"]
 
 [node name="StoryFrame1" type="Node2D"]
 script = ExtResource("1_qk6ui")
@@ -18,3 +19,5 @@ offset_bottom = 550.0
 scale = Vector2(2, 2)
 bbcode_enabled = true
 text = "[center]I guess, I'll go get lunch...[/center]"
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("2_xt16k")]
