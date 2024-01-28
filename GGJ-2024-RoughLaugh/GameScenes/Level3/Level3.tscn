@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dafnpil7om6qw" path="res://sprites/hanko_stamp_inked.png" id="5_c11sw"]
 [ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="5_uqhpj"]
 [ext_resource type="Texture2D" uid="uid://bs7gp80dcel6o" path="res://sprites/hanko_case.png" id="6_2p1eq"]
-[ext_resource type="PackedScene" uid="uid://xofoufhhqxos" path="res://GameScenes/Prefabs/Wall.tscn" id="6_gnuch"]
+[ext_resource type="PackedScene" uid="uid://b1w3grpqyvefo" path="res://GameScenes/Prefabs/Wall.tscn" id="6_gnuch"]
 [ext_resource type="Texture2D" uid="uid://dqwcnho8pxxs4" path="res://sprites/hanko_inkwell.png" id="7_4gw6o"]
-[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/DudemanLevel2.tscn" id="9_vpw48"]
+[ext_resource type="PackedScene" uid="uid://bkqfost15f5ct" path="res://GameScenes/Prefabs/DudemanLevel2.tscn" id="9_vpw48"]
 [ext_resource type="PackedScene" path="res://GameScenes/Prefabs/BGM.tscn" id="10_1pdmm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]
@@ -57,6 +57,7 @@ position = Vector2(-3, 128.375)
 shape = SubResource("RectangleShape2D_y2wk7")
 
 [node name="inkpad" type="Sprite2D" parent="Inkpad"]
+texture_filter = 1
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("6_2p1eq")
 
@@ -77,6 +78,7 @@ scale = Vector2(1, 1.25)
 shape = SubResource("RectangleShape2D_owuff")
 
 [node name="Paper" parent="." instance=ExtResource("1_ip1jq")]
+texture_filter = 1
 position = Vector2(1545, 632)
 
 [node name="Stump" type="RigidBody2D" parent="."]
@@ -93,6 +95,7 @@ position = Vector2(-3, -5.5)
 shape = SubResource("RectangleShape2D_f0ule")
 
 [node name="Stump" type="Sprite2D" parent="Stump"]
+texture_filter = 1
 position = Vector2(-4.95261, 0)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("4_gpe7g")
