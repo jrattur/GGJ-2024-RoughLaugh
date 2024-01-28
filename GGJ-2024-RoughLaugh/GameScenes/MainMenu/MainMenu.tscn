@@ -28,6 +28,7 @@ offset_bottom = 320.0
 texture = ExtResource("3_qn1ot")
 
 [node name="PlayButton" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 750.0
 offset_top = 480.0
 offset_right = 1170.0
@@ -53,6 +54,7 @@ scale = Vector2(6, 6)
 texture = ExtResource("6_2kqht")
 
 [node name="AboutButton" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 750.0
 offset_top = 720.0
 offset_right = 1170.0
