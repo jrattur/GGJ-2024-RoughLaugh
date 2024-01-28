@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame2.gd" id="1_3f3nj"]
 
-[node name="StoryCutscene" type="Node2D"]
+[node name="StoryFrame2" type="Node2D"]
 script = ExtResource("1_3f3nj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -17,4 +17,4 @@ offset_right = 960.0
 offset_bottom = 550.0
 scale = Vector2(2, 2)
 bbcode_enabled = true
-text = "[center]Back to work...[/center]"
+text = "[center]That was delicious... time to head back to work![/center]"

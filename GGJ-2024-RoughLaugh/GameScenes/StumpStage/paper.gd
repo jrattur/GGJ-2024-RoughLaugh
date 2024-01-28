@@ -15,7 +15,7 @@ func _process(delta):
 	if _timerRunning:
 		_timer += delta
 		if 2.0 <= _timer:
-			get_tree().change_scene_to_file("res://GameScenes/MainMenu/MainMenu.tscn")
+			get_tree().change_scene_to_file("res://GameScenes/StoryFrames/ComicFrame.tscn")
 
 func _on_paper_area_entered(area: Area2D):
 	_stumpSign.visible = true

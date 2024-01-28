@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://GameScenes/StumpStage/stump.gd" id="5_2v2mq"]
 [ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="5_i25cu"]
 [ext_resource type="Texture2D" uid="uid://dkncvqu510gyw" path="res://sprites/stump_red_head.png" id="6_1djik"]
-[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Wall.tscn" id="6_ppde8"]
+[ext_resource type="PackedScene" uid="uid://b1w3grpqyvefo" path="res://GameScenes/Prefabs/Wall.tscn" id="6_ppde8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]
 

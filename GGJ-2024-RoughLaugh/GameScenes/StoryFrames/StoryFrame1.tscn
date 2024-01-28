@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame1.gd" id="1_qk6ui"]
 
-[node name="StoryCutscene" type="Node2D"]
+[node name="StoryFrame1" type="Node2D"]
 script = ExtResource("1_qk6ui")
 
 [node name="ColorRect" type="ColorRect" parent="."]
