@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame1.gd" id="1_qk6ui"]
 [ext_resource type="FontFile" uid="uid://ipba56p7yaqq" path="res://Fonts/Stick-Regular.ttf" id="2_6tpt5"]
-[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/BGM.tscn" id="2_xt16k"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/BGM.tscn" id="2_xt16k"]
 
 [node name="StoryFrame1" type="Node2D"]
 script = ExtResource("1_qk6ui")

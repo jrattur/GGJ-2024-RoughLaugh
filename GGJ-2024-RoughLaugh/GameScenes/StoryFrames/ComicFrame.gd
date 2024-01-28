@@ -1,6 +1,6 @@
 extends Node2D
 
-var scroll_speed = 500
+var scroll_speed = 800
 var scroll_limit = - 3240 + 1080 - 100
 # 4320 would be the height of the image, 1080 is the end buffer and 100 pixels to give room for the button
 
@@ -26,4 +26,4 @@ func _ready():
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://GameScenes/Level2/Level2.tscn")
+	get_tree().change_scene_to_file("res://GameScenes/StoryFrames/StoryFrame3.tscn")

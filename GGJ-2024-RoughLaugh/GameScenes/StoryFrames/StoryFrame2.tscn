@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame2.gd" id="1_3f3nj"]
 [ext_resource type="FontFile" uid="uid://ipba56p7yaqq" path="res://Fonts/Stick-Regular.ttf" id="2_orupi"]
-[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/BGM.tscn" id="2_smupv"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/BGM.tscn" id="2_smupv"]
 
 [node name="StoryFrame2" type="Node2D"]
 script = ExtResource("1_3f3nj")
@@ -19,7 +19,7 @@ offset_right = 1920.0
 offset_bottom = 617.0
 theme_override_fonts/font = ExtResource("2_orupi")
 theme_override_font_sizes/font_size = 80
-text = "That was delicious... time to head back to work!"
+text = "I shouldn't have teased her..."
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://tw6vndnd22bn"]
+
+[ext_resource type="Script" path="res://GameScenes/StoryFrames/StoryFrame4.gd" id="1_yo4al"]
+[ext_resource type="FontFile" uid="uid://ipba56p7yaqq" path="res://Fonts/Stick-Regular.ttf" id="2_xpdrp"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/BGM.tscn" id="3_j5nt3"]
+
+[node name="StoryFrame4" type="Node2D"]
+script = ExtResource("1_yo4al")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.117647, 0.0862745, 0.0627451, 1)
+
+[node name="Text" type="Label" parent="."]
+texture_filter = 1
+offset_top = 500.0
+offset_right = 1920.0
+offset_bottom = 617.0
+theme_override_fonts/font = ExtResource("2_xpdrp")
+theme_override_font_sizes/font_size = 80
+text = "The work won't do itself, I hope this makes her/them laugh."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("3_j5nt3")]

@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="1_wkioe"]
 [ext_resource type="PackedScene" uid="uid://xofoufhhqxos" path="res://GameScenes/Prefabs/Wall.tscn" id="3_gjgfo"]
 [ext_resource type="PackedScene" path="res://GameScenes/Prefabs/plate1.tscn" id="3_iheah"]
-[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Dudeman.tscn" id="6_ansuc"]
+[ext_resource type="PackedScene" uid="uid://burb5qstcfxes" path="res://GameScenes/Prefabs/Dudeman.tscn" id="6_ansuc"]
 [ext_resource type="Script" path="res://GameScenes/Level1/Level1Manager.gd" id="6_np52r"]
 [ext_resource type="PackedScene" path="res://GameScenes/Prefabs/sushi11.tscn" id="7_87scu"]
 [ext_resource type="PackedScene" path="res://GameScenes/Prefabs/BackgroundLev1.tscn" id="7_dcdhm"]
-[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/BGM.tscn" id="8_30bjm"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/BGM.tscn" id="8_30bjm"]
 
 [node name="Level1" type="Node2D"]
 

@@ -19,7 +19,7 @@ func _process(delta):
 		_openTimer += delta
 		if 1.0 < _openTimer:
 			# some SE!
-			get_tree().change_scene_to_file("res://GameScenes/Level3/Level3.tscn")
+			get_tree().change_scene_to_file("res://GameScenes/StoryFrames/StoryFrame4.tscn")
 	
 func _physics_process(delta):
 	add_constant_torque(2000)

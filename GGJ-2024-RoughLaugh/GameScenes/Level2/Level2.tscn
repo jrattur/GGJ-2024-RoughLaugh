@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bkb20syd4vg53" path="res://sprites/doorknob_02_base.png" id="4_r1lnb"]
 [ext_resource type="Texture2D" uid="uid://v8xcd0rvsymw" path="res://sprites/doorknob_01_knob.png" id="5_hceff"]
 [ext_resource type="PackedScene" path="res://GameScenes/Prefabs/DudemanLevel2.tscn" id="8_ghrwc"]
-[ext_resource type="PackedScene" uid="uid://dmbt8qhgxwsrk" path="res://GameScenes/Prefabs/BGM.tscn" id="9_5p03g"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/BGM.tscn" id="9_5p03g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5tvys"]
 radius = 62.6259
