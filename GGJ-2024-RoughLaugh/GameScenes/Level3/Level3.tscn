@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dafnpil7om6qw" path="res://sprites/hanko_stamp_inked.png" id="5_c11sw"]
 [ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="5_uqhpj"]
 [ext_resource type="Texture2D" uid="uid://bs7gp80dcel6o" path="res://sprites/hanko_case.png" id="6_2p1eq"]
-[ext_resource type="PackedScene" uid="uid://burb5qstcfxes" path="res://GameScenes/Prefabs/Dudeman.tscn" id="6_b6q86"]
 [ext_resource type="PackedScene" uid="uid://b1w3grpqyvefo" path="res://GameScenes/Prefabs/Wall.tscn" id="6_gnuch"]
 [ext_resource type="Texture2D" uid="uid://dqwcnho8pxxs4" path="res://sprites/hanko_inkwell.png" id="7_4gw6o"]
+[ext_resource type="PackedScene" uid="uid://bkqfost15f5ct" path="res://GameScenes/Prefabs/DudemanLevel2.tscn" id="9_vpw48"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]
 
@@ -74,9 +74,6 @@ shape = SubResource("RectangleShape2D_owuff")
 [node name="Paper" parent="." instance=ExtResource("1_ip1jq")]
 position = Vector2(1545, 632)
 
-[node name="Dudeman" parent="." instance=ExtResource("6_b6q86")]
-position = Vector2(212, 169)
-
 [node name="Stump" type="RigidBody2D" parent="."]
 position = Vector2(960, 540)
 collision_layer = 4
@@ -108,5 +105,8 @@ position = Vector2(-1.38005, -1.23039)
 shape = SubResource("RectangleShape2D_j0ryj")
 
 [node name="StickProjector" parent="." instance=ExtResource("5_uqhpj")]
+
+[node name="Dudeman" parent="." instance=ExtResource("9_vpw48")]
+position = Vector2(225, 221)
 
 [connection signal="body_entered" from="Inkpad/Area2D" to="Stump" method="_on_area_2d_body_entered"]
