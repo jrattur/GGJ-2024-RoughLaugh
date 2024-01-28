@@ -10,7 +10,6 @@ func _process(delta):
 	elif Input.is_action_pressed("r_move_down"):
 		scroll_image(-delta)
 		
-	print(position.y, scroll_limit)
 
 	if position.y < scroll_limit:
 		position.y = scroll_limit
