@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://burb5qstcfxes"]
+[gd_scene load_steps=10 format=3 uid="uid://bkqfost15f5ct"]
 
-[ext_resource type="Texture2D" uid="uid://o255o8vje82m" path="res://sprites/UI_Hashimoto_Face_sheet_80x80.png" id="1_e8jl4"]
-[ext_resource type="Script" path="res://GameScenes/Prefabs/Dudeman.gd" id="1_pnls8"]
+[ext_resource type="Script" path="res://GameScenes/Prefabs/DudemanLevel2.gd" id="1_ffag5"]
+[ext_resource type="Texture2D" uid="uid://o255o8vje82m" path="res://sprites/UI_Hashimoto_Face_sheet_80x80.png" id="2_vryd7"]
 
 [sub_resource type="Animation" id="Animation_fswc0"]
 resource_name = "eating"
@@ -98,7 +98,7 @@ _data = {
 size = Vector2(16.3125, 8.5625)
 
 [node name="Dudeman" type="Node2D"]
-script = ExtResource("1_pnls8")
+script = ExtResource("1_ffag5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -117,9 +117,9 @@ shape = SubResource("RectangleShape2D_xvr4m")
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 z_index = -10
 texture_filter = 1
-texture = ExtResource("1_e8jl4")
+texture = ExtResource("2_vryd7")
 hframes = 4
 vframes = 4
-frame = 2
+frame = 10
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
