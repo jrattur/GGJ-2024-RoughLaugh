@@ -12,7 +12,8 @@ func _process(delta):
 	pass
 
 func _on_area_2d_body_entered(body: PhysicsBody2D):
-	isInked = true;
-	redHead.visible = true;
+	if -80 < rotation_degrees && rotation_degrees < 80:
+		isInked = true;
+		redHead.visible = true;
 
 

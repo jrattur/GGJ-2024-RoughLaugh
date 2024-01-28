@@ -19,5 +19,4 @@ func _process(delta):
 
 func _on_paper_area_entered(area: Area2D):
 	_stumpSign.visible = true
-	_stumpSign.global_position = area.global_position
 	_timerRunning = true

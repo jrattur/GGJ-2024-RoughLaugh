@@ -1,16 +1,16 @@
 [gd_scene load_steps=7 format=3 uid="uid://bwcs1afptea4w"]
 
-[ext_resource type="Texture2D" uid="uid://dclq56mtjjlea" path="res://sprites/sushi1.png" id="1_23rfo"]
 [ext_resource type="Script" path="res://GameScenes/Level3/stump.gd" id="1_fhtgr"]
-[ext_resource type="Texture2D" uid="uid://dkncvqu510gyw" path="res://sprites/stump_red_head.png" id="3_4bd3w"]
+[ext_resource type="Texture2D" uid="uid://k010358iihuf" path="res://sprites/hanko_stamp_base.png" id="2_wdrfh"]
+[ext_resource type="Texture2D" uid="uid://dafnpil7om6qw" path="res://sprites/hanko_stamp_inked.png" id="3_b46qm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_48lxk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0ule"]
-size = Vector2(70, 221)
+size = Vector2(86, 203)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j0ryj"]
-size = Vector2(74.0963, 36.3726)
+size = Vector2(71.3362, 31.5391)
 
 [node name="RigidBody2D" type="RigidBody2D"]
 collision_layer = 4
@@ -21,21 +21,23 @@ linear_damp = 5.0
 script = ExtResource("1_fhtgr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, -9.5)
+position = Vector2(-3, -5.5)
 shape = SubResource("RectangleShape2D_f0ule")
 
 [node name="Stump" type="Sprite2D" parent="."]
-scale = Vector2(0.443025, 1.46545)
-texture = ExtResource("1_23rfo")
+position = Vector2(-4.95261, 0)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("2_wdrfh")
 
 [node name="RedHead" type="Sprite2D" parent="Stump"]
 visible = false
-position = Vector2(0, 70.9381)
-scale = Vector2(2.49798, 0.60035)
-texture = ExtResource("3_4bd3w")
+texture = ExtResource("3_b46qm")
 
-[node name="Area2D" type="Area2D" parent="Stump/RedHead"]
+[node name="Head" type="Area2D" parent="Stump/RedHead"]
+position = Vector2(0.317535, 18)
+scale = Vector2(0.333333, 0.413333)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stump/RedHead/Area2D"]
-position = Vector2(8.61753e-07, 1.18638)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stump/RedHead/Head"]
+position = Vector2(-1.38005, -1.23039)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_j0ryj")

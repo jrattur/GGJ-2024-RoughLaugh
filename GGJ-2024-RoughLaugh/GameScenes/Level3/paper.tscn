@@ -1,28 +1,27 @@
 [gd_scene load_steps=5 format=3 uid="uid://boowm3elygwy5"]
 
-[ext_resource type="Texture2D" uid="uid://ee6xnao7tfwk" path="res://sprites/document_contract.png" id="1_i4xlt"]
+[ext_resource type="Texture2D" uid="uid://bv4jcbo7wrh04" path="res://sprites/paper_01_base.png" id="1_h0dci"]
 [ext_resource type="Script" path="res://GameScenes/Level3/paper.gd" id="2_0ibl5"]
-[ext_resource type="Texture2D" uid="uid://bbtbpv4lm2ro6" path="res://sprites/stumpSign.png" id="2_mluh5"]
+[ext_resource type="Texture2D" uid="uid://c4em0nq0bipd3" path="res://sprites/paper_02_stamped.png" id="3_1qcwg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xlkwl"]
-size = Vector2(55, 34)
+size = Vector2(96.5, 67.5)
 
 [node name="Paper" type="Area2D"]
+scale = Vector2(1.5, 1.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4.5, 25)
+position = Vector2(134, 198)
 shape = SubResource("RectangleShape2D_xlkwl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4.76837e-07, -9)
-scale = Vector2(0.189346, 0.21163)
-texture = ExtResource("1_i4xlt")
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_h0dci")
 script = ExtResource("2_0ibl5")
 
 [node name="StumpSign" type="Sprite2D" parent="Sprite2D"]
 visible = false
-position = Vector2(-40.406, 49.1622)
-scale = Vector2(0.640836, 0.563003)
-texture = ExtResource("2_mluh5")
+texture = ExtResource("3_1qcwg")
 
 [connection signal="area_entered" from="." to="Sprite2D" method="_on_paper_area_entered"]
