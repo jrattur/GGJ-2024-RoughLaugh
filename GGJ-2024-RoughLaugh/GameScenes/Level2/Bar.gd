@@ -1,13 +1,20 @@
 extends RigidBody2D
 
 var _openTimer = 0
+var _knob : Node2D;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	# 自身の親ノードを取得
+	var knobNode = $"../../KnobSpriteRoot"
+	if knobNode:
+		print("knobNode exist")
+		# ノードが見つかった場合の処理
+		_knob = knobNode;
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	_knob.rotation = rotation;
 	if rotation_degrees < -85:
 		_openTimer += delta
 		if 1.0 < _openTimer:

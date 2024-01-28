@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="5_uqhpj"]
 [ext_resource type="Texture2D" uid="uid://bs7gp80dcel6o" path="res://sprites/hanko_case.png" id="6_2p1eq"]
 [ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Dudeman.tscn" id="6_b6q86"]
-[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Wall.tscn" id="6_gnuch"]
+[ext_resource type="PackedScene" uid="uid://xofoufhhqxos" path="res://GameScenes/Prefabs/Wall.tscn" id="6_gnuch"]
 [ext_resource type="Texture2D" uid="uid://dqwcnho8pxxs4" path="res://sprites/hanko_inkwell.png" id="7_4gw6o"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0f4y3"]

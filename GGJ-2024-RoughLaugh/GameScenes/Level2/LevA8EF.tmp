@@ -1,9 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://dnwymux4if14n"]
+[gd_scene load_steps=10 format=3 uid="uid://dnwymux4if14n"]
 
-[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/BackgroundLev1.tscn" id="1_hyybo"]
 [ext_resource type="PackedScene" uid="uid://6glg2m67852o" path="res://GameScenes/Prefabs/StickProjector.tscn" id="1_nrsav"]
-[ext_resource type="Texture2D" uid="uid://2a3122nwvab8" path="res://sprites/background_02_door.png" id="2_54did"]
-[ext_resource type="PackedScene" uid="uid://xofoufhhqxos" path="res://GameScenes/Prefabs/Wall.tscn" id="2_ei0uv"]
+[ext_resource type="PackedScene" path="res://GameScenes/Prefabs/Wall.tscn" id="2_ei0uv"]
 [ext_resource type="Script" path="res://GameScenes/Level2/Bar.gd" id="3_a27ec"]
 [ext_resource type="Texture2D" uid="uid://bkb20syd4vg53" path="res://sprites/doorknob_02_base.png" id="4_r1lnb"]
 [ext_resource type="Texture2D" uid="uid://v8xcd0rvsymw" path="res://sprites/doorknob_01_knob.png" id="5_hceff"]
@@ -22,11 +20,7 @@ size = Vector2(526, 545)
 
 [node name="DoorStage" type="Node2D"]
 
-[node name="BackgroundLev1" parent="." instance=ExtResource("1_hyybo")]
-texture_filter = 1
-position = Vector2(960, 540)
-scale = Vector2(6.035, 6.035)
-texture = ExtResource("2_54did")
+[node name="StickProjector" parent="." instance=ExtResource("1_nrsav")]
 
 [node name="Wall" parent="." instance=ExtResource("2_ei0uv")]
 position = Vector2(932, 1161)
@@ -43,7 +37,7 @@ position = Vector2(2033, 659)
 rotation = 1.55994
 
 [node name="DoorNob" type="Node2D" parent="."]
-position = Vector2(1421, 785)
+position = Vector2(1175, 603)
 
 [node name="PinJoint2D" type="PinJoint2D" parent="DoorNob"]
 node_a = NodePath("Pin")
@@ -71,7 +65,7 @@ scale = Vector2(6.36614, 3.12729)
 shape = SubResource("RectangleShape2D_1pg3s")
 
 [node name="Stopper" type="StaticBody2D" parent="DoorNob"]
-position = Vector2(-578, -47)
+position = Vector2(-248, -59)
 collision_layer = 16
 collision_mask = 4
 
@@ -94,11 +88,9 @@ shape = SubResource("RectangleShape2D_o7tm0")
 scale = Vector2(3, 3)
 texture = ExtResource("4_r1lnb")
 
-[node name="KnobSpriteRoot" type="Node2D" parent="DoorNob"]
+[node name="KnobSpriteBase" type="Node" parent="DoorNob"]
 
-[node name="KnobSprite" type="Sprite2D" parent="DoorNob/KnobSpriteRoot"]
-position = Vector2(-140, 1)
+[node name="KnobSprite" type="Sprite2D" parent="DoorNob/KnobSpriteBase"]
+position = Vector2(1035, 603)
 scale = Vector2(2.995, 2.995)
 texture = ExtResource("5_hceff")
-
-[node name="StickProjector" parent="." instance=ExtResource("1_nrsav")]
